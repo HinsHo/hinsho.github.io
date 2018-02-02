@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://hinsho.com">
-  <title>Archives | HinsHo的博客</title>
+  <title>PowerMILL宏的使用01 | HinsHo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录生活与工作的点点滴滴，分享PowerMILL二次开发的知识，分享CAM二次所涉及的开发知识，计算机编程语言等相关的资讯！">
-<meta name="keywords" content="VB.net,C#,PowerMILL,PowerShape,Vericut,FeatureCAM,开发者,程序猿,程序媛,极客,编程,代码,Developer,Programmer,Coder">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HinsHo的博客">
-<meta property="og:url" content="http://hinsho.com/archives/index.html">
+  <meta name="description" content="概述宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。PowerMILL的宏语法格式本身很简单，基本都是 名词+动词 或者是 动词+名词">
+<meta name="keywords" content="PowerMILL,宏,语法,命令,自动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowerMILL宏的使用01">
+<meta property="og:url" content="http://hinsho.com/2018/01/06/PowerMILL宏的使用/index.html">
 <meta property="og:site_name" content="HinsHo的博客">
-<meta property="og:description" content="记录生活与工作的点点滴滴，分享PowerMILL二次开发的知识，分享CAM二次所涉及的开发知识，计算机编程语言等相关的资讯！">
+<meta property="og:description" content="概述宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。PowerMILL的宏语法格式本身很简单，基本都是 名词+动词 或者是 动词+名词">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/google.jpg">
+<meta property="og:updated_time" content="2018-02-02T05:25:30.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HinsHo的博客">
-<meta name="twitter:description" content="记录生活与工作的点点滴滴，分享PowerMILL二次开发的知识，分享CAM二次所涉及的开发知识，计算机编程语言等相关的资讯！">
+<meta name="twitter:title" content="PowerMILL宏的使用01">
+<meta name="twitter:description" content="概述宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。PowerMILL的宏语法格式本身很简单，基本都是 名词+动词 或者是 动词+名词">
+<meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/google.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
   
@@ -166,36 +169,300 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-PowerMILL宏的使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/06/PowerMILL宏的使用/" class="archive-article-date">
-  	<time datetime="2018-01-06T10:50:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/06/PowerMILL宏的使用/">PowerMILL宏的使用01</a>
+    <h1 class="article-title" itemprop="name">
+      PowerMILL宏的使用01
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/06/PowerMILL宏的使用/" class="archive-article-date">
+  	<time datetime="2018-01-06T10:50:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。<br>PowerMILL的宏语法格式本身很简单，基本都是 <strong><em>名词+动词</em></strong> 或者是 <strong><em>动词+名词</em></strong></p>
+<a id="more"></a> 
+<h2 id="常用单词"><a href="#常用单词" class="headerlink" title="常用单词"></a>常用单词</h2><p><strong>A.动词</strong></p>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>解释</th>
+<th>示例</th>
+<th>示例解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FORM</td>
+<td>打开表格</td>
+<td>FORM TOOLZHEIGHTS</td>
+<td>打开安全高度表格</td>
+</tr>
+<tr>
+<td>ACTIVATE</td>
+<td>激活元素</td>
+<td>ACTIVATE Toolpath ‘1’</td>
+<td>激活名称为 1的刀具路径</td>
+</tr>
+<tr>
+<td>DEACTIVATE</td>
+<td>使元素不激活</td>
+<td>DEACTIVATE Tool</td>
+<td>不激活刀具</td>
+</tr>
+<tr>
+<td>EDIT</td>
+<td>编辑一些参数</td>
+<td>EDIT BLOCK TOLERANCE “0.05”</td>
+<td>改变毛胚扩展</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除元素</td>
+<td>DELETE TOOLPATH “1”</td>
+<td>删除刀路1</td>
+</tr>
+<tr>
+<td>RESET</td>
+<td>重设计算</td>
+<td>EDIT BLOCK RESET</td>
+<td>计算毛胚</td>
+</tr>
+<tr>
+<td>ACCEPT</td>
+<td>接受表格之类</td>
+<td>FEEDRATE ACCEPT</td>
+<td>接受刀具参数表格</td>
+</tr>
+<tr>
+<td>RENAME</td>
+<td>重命名元素</td>
+<td>RENAME NCProgram “361712” “6”</td>
+<td>将名称为361712的NC程序命名为6</td>
+</tr>
+<tr>
+<td>DRAW</td>
+<td>显示元素</td>
+<td>DRAW BLOCK</td>
+<td>显示毛胚</td>
+</tr>
+<tr>
+<td>UNDRAW</td>
+<td>显示元素</td>
+<td>UNDRAW BLOCK</td>
+<td>不显示毛胚</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B.名词</strong></p>
+<table>
+<thead>
+<tr>
+<th>单词</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BLOCK</td>
+<td>毛胚</td>
+</tr>
+<tr>
+<td>NCProgram</td>
+<td>NC程序</td>
+</tr>
+<tr>
+<td>Toolpath</td>
+<td>刀具路径</td>
+</tr>
+<tr>
+<td>Tool</td>
+<td>刀具</td>
+</tr>
+<tr>
+<td>Boundary</td>
+<td>边界</td>
+</tr>
+<tr>
+<td>Pattern</td>
+<td>参考线</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>图层</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>模型</td>
+</tr>
+<tr>
+<td>STOCKMODEL</td>
+<td>残留模型</td>
+</tr>
+<tr>
+<td>GROUP</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>RPM</td>
+<td>转速</td>
+</tr>
+<tr>
+<td>FRATE</td>
+<td>进给</td>
+</tr>
+<tr>
+<td>PRATE</td>
+<td>下切速度</td>
+</tr>
+<tr>
+<td>RSPEED</td>
+<td>掠过速度</td>
+</tr>
+<tr>
+<td>FINISHING</td>
+<td>精加工</td>
+</tr>
+<tr>
+<td>ROUGHING</td>
+<td>粗加工</td>
+</tr>
+<tr>
+<td>OPERATION</td>
+<td>操作</td>
+</tr>
+<tr>
+<td>ZMAX</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>ZMIN</td>
+<td>最小值</td>
+</tr>
+<tr>
+<td>SKIMDIST</td>
+<td>掠过</td>
+</tr>
+<tr>
+<td>PLUNGEDIST</td>
+<td>下切</td>
+</tr>
+<tr>
+<td>GOUGECHECK</td>
+<td>过切检查</td>
+</tr>
+<tr>
+<td>LEADS</td>
+<td>刀路连接</td>
+</tr>
+<tr>
+<td>HARC（H+ARC）</td>
+<td>水平圆弧-(VARC垂直圆弧)—组合词</td>
+</tr>
+<tr>
+<td>PAGE</td>
+<td>页面</td>
+</tr>
+<tr>
+<td>RTOLERANCE（R+TOLERANCE)</td>
+<td>粗加工公差（FTOLERANCE精加工公差）—组合词</td>
+</tr>
+<tr>
+<td>RTHICKNESS（R+THICKNESS）</td>
+<td>粗加工余量(FTHICKNESS精加工余量) —组合词</td>
+</tr>
+<tr>
+<td>STEPDOWN</td>
+<td>下刀步距（Z方向）</td>
+</tr>
+<tr>
+<td>STEPOVER</td>
+<td>切削宽度（XY方向）</td>
+</tr>
+<tr>
+<td>SPIRAL</td>
+<td>螺旋</td>
+</tr>
+<tr>
+<td>CLIMB</td>
+<td>顺铣</td>
+</tr>
+<tr>
+<td>ANY</td>
+<td>来回铣</td>
+</tr>
+<tr>
+<td>CONVENTIONAL</td>
+<td>逆铣</td>
+</tr>
+<tr>
+<td>ON</td>
+<td>开启参数</td>
+</tr>
+<tr>
+<td>OFF</td>
+<td>关闭参数</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>举例说明</em></strong></p>
+<p>1) ACTIVATE Toolpath “2”<br>  词义:激活名称为D10-胶位开粗-1的刀路</p>
+<p>语法：<strong>动词</strong>（ACTIVATE）+<strong>名词</strong>（Toolpath）+<strong>名词</strong>(动词)<br>   点评：这个是PM语法中最常见的模式，大约占的80%多，元素名称要加“”。记住常用动词和常用名词，很多宏都可以明白！<br>   类似的语句：<br>     EDIT RTHICKNESS “0.5”（改开粗余量）<br>     EDIT ACUTDIR ANY（改为来回铣）<br>     EDIT AREAFILTER OFF（不使用区域过滤）<br>     RENAME Tool “R4” “8”（改变刀具名称）<br>2) ROTATE TRANSFORM FRONT VIEWMILL RESIZEVIEW<br>   词义:前试图查看<br>   语法：固定命令<br>   点评：这个是PM语法中也较多的模式，大约占的10%多。这些就靠平常多记了！<br>   类似的语句：<br>     DELETE SCALE VIEWMILL RESIZEVIEW（全屏查看）<br>     SET TOOLPATHPOINTS（显示刀位点）<br>     DELETE TOOLPATH ; SELECTED（删除选中的刀路）</p>
+<p><strong>当然如果你认识的单词多的话，这样语句，看到几个关键词，也是能明白是什么意思。</strong><br>如果英文阅读能力不是很好，那这个时候，你可以使用google translate大法了。在以下的翻译框中输入英文</p>
+<p><img src="http://p3i8i3rg0.bkt.clouddn.com/google.jpg" alt=""></p>
+<h2 id="宏运行的屏幕闪烁的解决方法"><a href="#宏运行的屏幕闪烁的解决方法" class="headerlink" title="宏运行的屏幕闪烁的解决方法"></a>宏运行的屏幕闪烁的解决方法</h2><p><strong>原因</strong>     出现窗体<br><strong>解决方法</strong> 尽量不要让窗体出现。<br><strong>举例</strong><br>1）比较隐藏的修改例子<br>  <strong><em>IMPORT TEMPLATE ENTITY TOOLPATH TMPLTSELECTORGUI “Finishing\3D-Offset-Finishing.ptf”</em></strong><br>  这样的宏运行的就会弹出刀路设置窗体，我们可以这样修改，让他不弹出窗体，屏幕就不会闪烁，<br>  修改后命令<br>  <strong><em>IMPORT TEMPLATE ENTITY TOOLPATH  “Finishing\3D-Offset-Finishing.ptf” </em></strong><br>  <strong>点评</strong><br>  这样的宏是我们比较常用的，且被修改的地方比较隐蔽！在这里我们去掉了单词<strong>TMPLTSELECTORGUI</strong>，并且要把2句合在一行！</p>
+<p>2）比较明显的修改例子<br>  <strong><em> FORM WPEDIT EDIT WORKPLANE “kk” INTERACTIVE TRANSFORM MOVE “5”<br>  TRANSFORM TYPE MOVE<br>  TRANSFORM MOVEZ PRESET TRANSFORM WORKPLANE “kk”  WPEDIT ACCEPT</em></strong><br>  这样的宏运行的就会弹出坐标系编辑窗体，我们可以这样修改第1句，让他不弹出窗体，屏幕就不会闪烁:<br>  修改后命令<br>  <strong><em>  EDIT WORKPLANE “kk” INTERACTIVE</em></strong><br>  点评，这样的宏是我们比较常用的，且被修改的地方非常的明显，当宏里面出现FORM，在这里我们去掉了单词 FORM,并且一般也要一起去掉FORM后的名词！</p>
+<h2 id="做宏要注意问题"><a href="#做宏要注意问题" class="headerlink" title="做宏要注意问题"></a>做宏要注意问题</h2><p><strong>1）需要模块化的思想</strong><br>  一些常用的宏可以做成一个单独的宏文件，比如设置安全高度，铜公分中台毛胚等，再用MACRO+路径调用，这样做少了很多重复劳动，并且后面修改起来也很方便。那些是你常用的宏，这个大家在做宏中可以体会的出来。</p>
+<p><strong>2）我们做宏的目的要明确，且宏要有通用性</strong><br>  做宏不是录制一遍，宏就好了，这样的宏也许就只能用在你录制的这个PowerMILL文件里面，用在其他的地方就会出错！我们是做宏，不是录宏，录宏只是第1步，后面还编辑（不显示窗体，删除一些废话等），再用其他的PM文件去测试，再修改的过程！</p>
+<p>  做模块特别要注意宏的通用性，这里举个简单例子，假设你公司的分中台都是10MM高，下面是创建这个分中台的标准宏：<br>  <strong>（PowerMILL10版）</strong><br>  <strong>//FORM BLOCK</strong> 这个是打开毛胚对话框，前面加“//”那这段宏不运行，屏幕不闪烁<br>  <strong> UNDRAW BLOCK</strong>  不显示毛胚<br>  <strong> DELETE BLOCK</strong> 删除毛胚<br>  <strong>EDIT BLOCK ALL UNLOCK</strong> 解锁所以方向值<br>  <strong>EDIT BLOCK TOLERANCE “0.01”</strong> 设置计算公差<br>  <strong>EDIT BLOCK LIMITTYPE MODEL</strong> 设置计算参考模型<br>  <strong>EDIT BLOCK RESETLIMIT “0”</strong> 设置计算放大余量  </p>
+<p> （以上的宏就能达到通用性的效果，重置毛胚方式，也许在你的平常的录制中没有发现这些问题，但你要学会组合宏达到你的目的，这个是做宏的精髓）  后面的宏，关键就是锁方向值，计算。<br>  <strong>EDIT BLOCK RESET </strong><br>  <strong>EDIT BLOCK ALL LOCK</strong><br>  <strong>EDIT BLOCK ZMAX UNLOCK</strong> 这里锁住了Z最小值，XY值，解锁Z最大值，这样你懂的<br>  <strong>EDIT BLOCK ZLEN “10”</strong> 这里直接设置长度为10.就避开了每次电极最底点不一样的问题，做宏是一种思路，做宏是一种设计 </p>
+<p>  <strong>EDIT BLOCK ZLEN LOCK<br>   EDIT BLOCK YLEN UNLOCK<br>   EDIT BLOCK XLEN UNLOCK<br>   EDIT BLOCK RESETLIMIT “10”<br>   EDIT BLOCK RESET<br>   BLOCK ACCEPT</strong></p>
+<p><strong>3）做宏我建议一个目的一目的的去录制</strong>。<br>   比如我们要做电极的开粗刀路，假设包含分中台上面的开粗刀路和下面的开粗刀路，当然还有其他的东西，比如毛胚等。 这个我们可以分为几个目的去做，分解成激活刀具+设置安全高度+设置分中台上毛胚+加载刀路+设置刀具加工状态调用刀具参数+设置列表参数并计算+设置进退刀（斜向进刀）+设置分中台下毛胚+加载刀路+设置刀具加工状态调用刀具参数+设置列表参数并计算+设置进退刀（水平圆弧进刀）。这样，安全高度，毛胚，斜向进刀，水平圆弧进刀，设置刀具加工状态调用刀具参数这些东西，我们可以做成模块，并且这些模块我们还可以在用户右键菜单中调用。其他东西就是你要用哪个刀路，设置哪些参数的问题，这些是变化的可以放进主体宏里面去。</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>  关于宏的其他语法，以及命令的灵活使用，我将会在日后的博客中进行描述。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -223,65 +490,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://hinsho.com/2018/01/06/PowerMILL宏的使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/01/开设个人博客/" class="archive-article-date">
-  	<time datetime="2018-01-01T01:02:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/01/开设个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">开设个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/开设个人博客/">开设个人博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工作</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点点滴滴</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -304,8 +612,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
