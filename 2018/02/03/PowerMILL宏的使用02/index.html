@@ -195,6 +195,33 @@
         
       </header>
     
+    <!-- 目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+  <span class="btn-bg"></span>
+  <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始宏"><span class="toc-number">2.</span> <span class="toc-text">初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#录制宏"><span class="toc-number">3.</span> <span class="toc-text">录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a></li></ol>
+ </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+     
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。<br><strong><em> 本文使用PowerMILL 2017版本进行讲述 </em></strong>，其他版本的软件类似。</p>
@@ -435,34 +462,6 @@
 
   
 
-
-<!-- 目录内容 -->
-
-  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-  <span class="btn-bg"></span>
-  <span class="btn-text">文章导航</span>
-  </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始宏"><span class="toc-number">2.</span> <span class="toc-text">初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#录制宏"><span class="toc-number">3.</span> <span class="toc-text">录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a></li></ol>
- </div>
- <script type="text/javascript">
-  function showToc(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:block");
-      show_toc_btn.setAttribute("style","display:none");
-      };
-  function showBtn(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:none");
-      show_toc_btn.setAttribute("style","display:block");
-      };
- </script>
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>

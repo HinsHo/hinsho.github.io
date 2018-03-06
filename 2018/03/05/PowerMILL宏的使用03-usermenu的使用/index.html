@@ -192,6 +192,33 @@
         
       </header>
     
+    <!-- 目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+  <span class="btn-bg"></span>
+  <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">usermenu菜单的使用</span></a></li></ol>
+ </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+     
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。</p>
@@ -381,34 +408,6 @@
 
   
 
-
-<!-- 目录内容 -->
-
-  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-  <span class="btn-bg"></span>
-  <span class="btn-text">文章导航</span>
-  </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">usermenu菜单的使用</span></a></li></ol>
- </div>
- <script type="text/javascript">
-  function showToc(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:block");
-      show_toc_btn.setAttribute("style","display:none");
-      };
-  function showBtn(){
-      var toc_article = document.getElementById("toc-article");
-      var show_toc_btn = document.getElementById("show-toc-btn");
-      toc_article.setAttribute("style","display:none");
-      show_toc_btn.setAttribute("style","display:block");
-      };
- </script>
-     
-<!-- 目录内容结束 -->
           </div>
         </div>
       </div>
