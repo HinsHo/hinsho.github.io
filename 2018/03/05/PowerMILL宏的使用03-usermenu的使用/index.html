@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://hinsho.com">
   <title>PowerMILL宏的使用03-usermenu的使用 | HinsHo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
+  <meta name="description" content="1 概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
 <meta name="keywords" content="PowerMILL,宏,语法,命令,自动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PowerMILL宏的使用03-usermenu的使用">
 <meta property="og:url" content="http://hinsho.com/2018/03/05/PowerMILL宏的使用03-usermenu的使用/index.html">
 <meta property="og:site_name" content="HinsHo的博客">
-<meta property="og:description" content="概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
+<meta property="og:description" content="1 概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/usermenu.jpg">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/usermenu_importmodel.jpg">
@@ -27,10 +27,10 @@
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/customise_content_menu.jpg">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/win10_setting.jpg">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/win10_home.jpg">
-<meta property="og:updated_time" content="2018-03-09T16:29:12.349Z">
+<meta property="og:updated_time" content="2018-03-10T00:48:12.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PowerMILL宏的使用03-usermenu的使用">
-<meta name="twitter:description" content="概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
+<meta name="twitter:description" content="1 概述PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。">
 <meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/usermenu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
@@ -210,7 +210,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">usermenu菜单的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的结构"><span class="toc-number">4.</span> <span class="toc-text">usermenu菜单的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件菜单项"><span class="toc-number">4.1.</span> <span class="toc-text">文件菜单项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#菜单的命令格式"><span class="toc-number">4.2.</span> <span class="toc-text">菜单的命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#几种定义菜单项的方法"><span class="toc-number">4.3.</span> <span class="toc-text">几种定义菜单项的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成usermenu文件的定义"><span class="toc-number">4.4.</span> <span class="toc-text">完成usermenu文件的定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将usermenu文件显示在PowerMILL中"><span class="toc-number">5.</span> <span class="toc-text">将usermenu文件显示在PowerMILL中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1：通过自定义路径"><span class="toc-number">5.1.</span> <span class="toc-text">方法1：通过自定义路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2：通过Window系统的环境变量定义"><span class="toc-number">5.2.</span> <span class="toc-text">方法2：通过Window系统的环境变量定义</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">2 usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">3 usermenu菜单的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-usermenu菜单的结构"><span class="toc-number">4.</span> <span class="toc-text">4 usermenu菜单的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-文件菜单项"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 文件菜单项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-菜单的命令格式"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 菜单的命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-几种定义菜单项的方法"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 几种定义菜单项的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-完成usermenu文件的定义"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 完成usermenu文件的定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-将usermenu文件显示在PowerMILL中"><span class="toc-number">5.</span> <span class="toc-text">5 将usermenu文件显示在PowerMILL中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-方法1：通过自定义路径"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 方法1：通过自定义路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-方法2：通过Window系统的环境变量定义"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 方法2：通过Window系统的环境变量定义</span></a></li></ol></li></ol>
  </div>
  <script type="text/javascript">
   function showToc(){
@@ -230,19 +230,19 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。</p>
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>PowerMILL软件中，在资源管理器中对每一种元素，例如刀具路径右键，弹出一个上下文件菜单，这个菜单中有与刀具路径相应的子菜单。平时我们在进行编程过程中，经常使用此菜单进行软件的交互。除了已有的元素右键上下文菜单。用户可以自己定义一个菜单，这个菜单称之用usermenu，中文可以称为用户菜单。本篇博文，主要讲述怎么定义适合自己的usermenu。</p>
 <a id="more"></a>
-<h2 id="usermenu的显示"><a href="#usermenu的显示" class="headerlink" title="usermenu的显示"></a>usermenu的显示</h2><p>当用户正确配置有usermenu后，用户可以在PowerMILL资源管理器的空白区域，单击鼠标右键，此时弹出的的上下文菜单，就是用户定义的usermenu。如下图所示：</p>
+<h2 id="2-usermenu的显示"><a href="#2-usermenu的显示" class="headerlink" title="2 usermenu的显示"></a>2 usermenu的显示</h2><p>当用户正确配置有usermenu后，用户可以在PowerMILL资源管理器的空白区域，单击鼠标右键，此时弹出的的上下文菜单，就是用户定义的usermenu。如下图所示：</p>
 <p><img src="http://p3i8i3rg0.bkt.clouddn.com/usermenu.jpg" alt=""></p>
 <p>笔者这里定义很多的子菜单。有语言的中英文转换，输入模型，删除全部，特征探测全部等等。同时笔者还在usermenu中采用子菜单的结构，可以将相同类别的菜单放在同一层级中，便于菜单的分类管理。</p>
-<h2 id="usermenu菜单的使用"><a href="#usermenu菜单的使用" class="headerlink" title="usermenu菜单的使用"></a>usermenu菜单的使用</h2><p>usermenu菜单的使用与正常的PoewrMILL元素菜单相同，单击相应的子菜单，则软件根据菜单定义的功能进行软件交互。例如，单击了usermenu中的输入模型。则弹出一个选择模型文件的对话框。</p>
+<h2 id="3-usermenu菜单的使用"><a href="#3-usermenu菜单的使用" class="headerlink" title="3 usermenu菜单的使用"></a>3 usermenu菜单的使用</h2><p>usermenu菜单的使用与正常的PoewrMILL元素菜单相同，单击相应的子菜单，则软件根据菜单定义的功能进行软件交互。例如，单击了usermenu中的输入模型。则弹出一个选择模型文件的对话框。</p>
 <p><img src="http://p3i8i3rg0.bkt.clouddn.com/usermenu_importmodel.jpg" alt=""></p>
-<h2 id="usermenu菜单的结构"><a href="#usermenu菜单的结构" class="headerlink" title="usermenu菜单的结构"></a>usermenu菜单的结构</h2><p>用户自定义菜单，是一个由用户自行定义的菜单文件，它是一个不带扩展名的并且文件名字为user_menu的文件决定的。例如笔者所使用的文件如下图所示</p>
+<h2 id="4-usermenu菜单的结构"><a href="#4-usermenu菜单的结构" class="headerlink" title="4 usermenu菜单的结构"></a>4 usermenu菜单的结构</h2><p>用户自定义菜单，是一个由用户自行定义的菜单文件，它是一个不带扩展名的并且文件名字为user_menu的文件决定的。例如笔者所使用的文件如下图所示</p>
 <p><img src="http://p3i8i3rg0.bkt.clouddn.com/user_menu_file.jpg" alt=""></p>
-<h3 id="文件菜单项"><a href="#文件菜单项" class="headerlink" title="文件菜单项"></a>文件菜单项</h3><p>使用文本编辑器，使用notepad++打开user_menu，可以看到整个文件的内容以及命令行。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/user_menu_content.jpg" alt=""></p>
+<h3 id="4-1-文件菜单项"><a href="#4-1-文件菜单项" class="headerlink" title="4.1 文件菜单项"></a>4.1 文件菜单项</h3><p>使用文本编辑器，使用notepad++打开user_menu，可以看到整个文件的内容以及命令行。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/user_menu_content.jpg" alt=""></p>
 <p>文件中有几个特定的字符，第一个开始的大写字母。分别为：</p>
 <p>U -用户菜单标识<br>T -用户菜单标题，名称<br>S -用户菜单的分隔符号<br>I -菜单项的内容<br>M -开始子菜单<br>Z -结束子菜单，返回上一级菜单</p>
-<h3 id="菜单的命令格式"><a href="#菜单的命令格式" class="headerlink" title="菜单的命令格式"></a>菜单的命令格式</h3><p>用户菜单针对不同的菜单功能，拥有不同的语法格式。分别针对6个大写开头的菜单命令。为了学习user_menu的制作，我们在计算机的 <strong>C:\PM Customize</strong> 目录下,新建立一个名称为user_menu的文件，同时使用文本编辑器编辑此文件。</p>
+<h3 id="4-2-菜单的命令格式"><a href="#4-2-菜单的命令格式" class="headerlink" title="4.2 菜单的命令格式"></a>4.2 菜单的命令格式</h3><p>用户菜单针对不同的菜单功能，拥有不同的语法格式。分别针对6个大写开头的菜单命令。为了学习user_menu的制作，我们在计算机的 <strong>C:\PM Customize</strong> 目录下,新建立一个名称为user_menu的文件，同时使用文本编辑器编辑此文件。</p>
 <p>1）字母U开始的命令<br>以U开始的命令，表示当前文件为用户菜单。其命令为固定，并且必须写在第一行。格式如下</p>
 <p><strong>U user_menu</strong></p>
 <p>2）以字母S开始的命令<br>以S开始的命令，表示两个菜单项之间的分隔。其字母格式是单字母S独自占一行。</p>
@@ -260,17 +260,17 @@
 <p>5）字母M开始的命令<br>字母M开始的命令为表示开启子菜单，表示单击此菜单，将会显示下一层级的菜单项。其语法规则：</p>
 <p><strong>M “菜单名称[(菜单快捷键)]”</strong></p>
 <p>6）字母Z开始的命令<br>字母M开始的命令为表示结束子菜单，它与字母M是成对出现，其语法规则是字母Z独占一行。</p>
-<h3 id="几种定义菜单项的方法"><a href="#几种定义菜单项的方法" class="headerlink" title="几种定义菜单项的方法"></a>几种定义菜单项的方法</h3><p>在使用字母I进行菜单项命令的定义进，有以下几种定义方法：</p>
+<h3 id="4-3-几种定义菜单项的方法"><a href="#4-3-几种定义菜单项的方法" class="headerlink" title="4.3 几种定义菜单项的方法"></a>4.3 几种定义菜单项的方法</h3><p>在使用字母I进行菜单项命令的定义进，有以下几种定义方法：</p>
 <p>1）直接使用命令定义，例如：</p>
 <p>I “英文(&amp;E)” 1 “Lang english”<br>I “简体中文(&amp;C)” 1 “Lang CHS”</p>
 <p>2）通过菜单运行某个特定的宏文件。其与直接使用命令的不同之外在于，通过Macro字母来调用宏文件，而大部分的命令语句写到宏文件中，例如笔者中的<strong>一键选取垂直面.mac</strong>宏文件。</p>
 <p>I “模型垂直面” 1 “MACRO ‘E:\Autodesk\Custom Files\UserMenu Macro\一键选取垂直面.mac’”<br>I “全部正向曲面” 1 “Macro 全部正向曲面.mac”<br>I “曲面分中顶定零” 1 “Macro 四面分中顶定零.mac”</p>
 <p>以上命令中的<strong>全部正向曲面</strong>和<strong>曲面分中顶定零</strong>中通过Macro来调用宏文件，但没有给出文件的详细的路径，是因为这两个宏文件与user_menu文件处于同一文件夹。故不需要定义详细的路径。</p>
-<h3 id="完成usermenu文件的定义"><a href="#完成usermenu文件的定义" class="headerlink" title="完成usermenu文件的定义"></a>完成usermenu文件的定义</h3><p>用户根据自己的实际需要，撰写一个完整的user_menu文件。例如下图所示：<br><img src="http://p3i8i3rg0.bkt.clouddn.com/custome_finish.jpg" alt=""></p>
-<h2 id="将usermenu文件显示在PowerMILL中"><a href="#将usermenu文件显示在PowerMILL中" class="headerlink" title="将usermenu文件显示在PowerMILL中"></a>将usermenu文件显示在PowerMILL中</h2><p>前面的章节，讲述了usermenu文件的结构，以及怎么定义usermenu文件，但完成了文件的定义后，只是完成了其菜单的内容以及界面,还需要在PowerMILL中进行此菜单的调用。以下将讲述自动实现菜单的调用。有两种方法</p>
-<h3 id="方法1：通过自定义路径"><a href="#方法1：通过自定义路径" class="headerlink" title="方法1：通过自定义路径"></a>方法1：通过自定义路径</h3><p>通过PowerMILL中指定自定义宏路径，可以实现调用user_menu文件。<br>1)单击PowerMILL菜单<strong>工具</strong>-&gt;<strong>自定义路径</strong><br>2)在下拉列表中，选择<strong>宏路径</strong><br>3)单击添加按钮。并将路径添加到自定义路径中<br><img src="http://p3i8i3rg0.bkt.clouddn.com/customise_path.jpg" alt=""></p>
+<h3 id="4-4-完成usermenu文件的定义"><a href="#4-4-完成usermenu文件的定义" class="headerlink" title="4.4 完成usermenu文件的定义"></a>4.4 完成usermenu文件的定义</h3><p>用户根据自己的实际需要，撰写一个完整的user_menu文件。例如下图所示：<br><img src="http://p3i8i3rg0.bkt.clouddn.com/custome_finish.jpg" alt=""></p>
+<h2 id="5-将usermenu文件显示在PowerMILL中"><a href="#5-将usermenu文件显示在PowerMILL中" class="headerlink" title="5 将usermenu文件显示在PowerMILL中"></a>5 将usermenu文件显示在PowerMILL中</h2><p>前面的章节，讲述了usermenu文件的结构，以及怎么定义usermenu文件，但完成了文件的定义后，只是完成了其菜单的内容以及界面,还需要在PowerMILL中进行此菜单的调用。以下将讲述自动实现菜单的调用。有两种方法</p>
+<h3 id="5-1-方法1：通过自定义路径"><a href="#5-1-方法1：通过自定义路径" class="headerlink" title="5.1 方法1：通过自定义路径"></a>5.1 方法1：通过自定义路径</h3><p>通过PowerMILL中指定自定义宏路径，可以实现调用user_menu文件。<br>1)单击PowerMILL菜单<strong>工具</strong>-&gt;<strong>自定义路径</strong><br>2)在下拉列表中，选择<strong>宏路径</strong><br>3)单击添加按钮。并将路径添加到自定义路径中<br><img src="http://p3i8i3rg0.bkt.clouddn.com/customise_path.jpg" alt=""></p>
 <p>这个时候，我们在PowerMILL资源管理器中空白处右键，可以得到如下的上下文菜单。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/customise_content_menu.jpg" alt=""></p>
-<h3 id="方法2：通过Window系统的环境变量定义"><a href="#方法2：通过Window系统的环境变量定义" class="headerlink" title="方法2：通过Window系统的环境变量定义"></a>方法2：通过Window系统的环境变量定义</h3><p>上述的方法1，可以针对当前打开的PowerMILL进行user_menu的定义，当计算机中安装有不同版本的PowerMILL时，以及计算机中配置有不同的用户是，会出现有的用户无法访问user_menu文件，此里则可以通过定义系统的全局环境变量解决此问题。</p>
+<h3 id="5-2-方法2：通过Window系统的环境变量定义"><a href="#5-2-方法2：通过Window系统的环境变量定义" class="headerlink" title="5.2 方法2：通过Window系统的环境变量定义"></a>5.2 方法2：通过Window系统的环境变量定义</h3><p>上述的方法1，可以针对当前打开的PowerMILL进行user_menu的定义，当计算机中安装有不同版本的PowerMILL时，以及计算机中配置有不同的用户是，会出现有的用户无法访问user_menu文件，此里则可以通过定义系统的全局环境变量解决此问题。</p>
 <p>以window 10操作系统为例子说明：<br>1）在此电脑中，右键，选择属性。<br>2）右弹出的系统设置中，单击<strong>系统高级设置</strong>-&gt;<strong>高级</strong>-&gt;<strong>环境变量</strong><br><img src="http://p3i8i3rg0.bkt.clouddn.com/win10_setting.jpg" alt=""></p>
 <p>3)在系统变量中，新建一个以HOME为变量名，值为C:\PM Customize的环境变量<br><img src="http://p3i8i3rg0.bkt.clouddn.com/win10_home.jpg" alt=""></p>
 <p>3)在C:\PM Customize文件夹中新建一个名称为pmill2的文件夹，同时把user_menu文件从原来C:\PM Customize中移到C:\PM Customize\pmill2文件夹中<br>4）定义完了环境变量后与pmill2文件后，可关闭PowerMILL，再次打开PowerMILL时，同样可以方便调用user_menu菜单内容。</p>
@@ -436,7 +436,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">usermenu菜单的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usermenu菜单的结构"><span class="toc-number">4.</span> <span class="toc-text">usermenu菜单的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件菜单项"><span class="toc-number">4.1.</span> <span class="toc-text">文件菜单项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#菜单的命令格式"><span class="toc-number">4.2.</span> <span class="toc-text">菜单的命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#几种定义菜单项的方法"><span class="toc-number">4.3.</span> <span class="toc-text">几种定义菜单项的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成usermenu文件的定义"><span class="toc-number">4.4.</span> <span class="toc-text">完成usermenu文件的定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将usermenu文件显示在PowerMILL中"><span class="toc-number">5.</span> <span class="toc-text">将usermenu文件显示在PowerMILL中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1：通过自定义路径"><span class="toc-number">5.1.</span> <span class="toc-text">方法1：通过自定义路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2：通过Window系统的环境变量定义"><span class="toc-number">5.2.</span> <span class="toc-text">方法2：通过Window系统的环境变量定义</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-usermenu的显示"><span class="toc-number">2.</span> <span class="toc-text">2 usermenu的显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-usermenu菜单的使用"><span class="toc-number">3.</span> <span class="toc-text">3 usermenu菜单的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-usermenu菜单的结构"><span class="toc-number">4.</span> <span class="toc-text">4 usermenu菜单的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-文件菜单项"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 文件菜单项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-菜单的命令格式"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 菜单的命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-几种定义菜单项的方法"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 几种定义菜单项的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-完成usermenu文件的定义"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 完成usermenu文件的定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-将usermenu文件显示在PowerMILL中"><span class="toc-number">5.</span> <span class="toc-text">5 将usermenu文件显示在PowerMILL中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-方法1：通过自定义路径"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 方法1：通过自定义路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-方法2：通过Window系统的环境变量定义"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 方法2：通过Window系统的环境变量定义</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -573,18 +573,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点点滴滴</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PowerMILL</a>
               </li>
              
@@ -602,6 +590,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">点点滴滴</a>
               </li>
             
             <div class="clearfix"></div>

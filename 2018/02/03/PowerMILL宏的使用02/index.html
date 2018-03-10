@@ -8,23 +8,23 @@
   <link rel="dns-prefetch" href="http://hinsho.com">
   <title>PowerMILL宏的使用02 | HinsHo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
+  <meta name="description" content="1 概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
 <meta name="keywords" content="PowerMILL,宏,语法,命令,自动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PowerMILL宏的使用02">
 <meta property="og:url" content="http://hinsho.com/2018/02/03/PowerMILL宏的使用02/index.html">
 <meta property="og:site_name" content="HinsHo的博客">
-<meta property="og:description" content="概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
+<meta property="og:description" content="1 概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/lib_macro.png">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/lib_macro_pminch.png">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/macro_record.png">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/macro_ncprogram_initial.png">
 <meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/macro_stop.png">
-<meta property="og:updated_time" content="2018-03-06T01:20:54.174Z">
+<meta property="og:updated_time" content="2018-03-10T00:49:00.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PowerMILL宏的使用02">
-<meta name="twitter:description" content="概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
+<meta name="twitter:description" content="1 概述PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。 本文使用PowerMILL 2017版本进行讲述 ，其他版本的软件类似。">
 <meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/lib_macro.png">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
@@ -204,7 +204,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始宏"><span class="toc-number">2.</span> <span class="toc-text">初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#录制宏"><span class="toc-number">3.</span> <span class="toc-text">录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-初始宏"><span class="toc-number">2.</span> <span class="toc-text">2 初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-录制宏"><span class="toc-number">3.</span> <span class="toc-text">3 录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">4 宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-后续"><span class="toc-number">5.</span> <span class="toc-text">5 后续</span></a></li></ol>
  </div>
  <script type="text/javascript">
   function showToc(){
@@ -224,9 +224,9 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。<br><strong><em> 本文使用PowerMILL 2017版本进行讲述 </em></strong>，其他版本的软件类似。</p>
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>PowerMILL的宏用法很简单，同时PowerMILL在软件启用的时候，会读取初始宏的内容。本篇博客主要讲述初始宏文件，以及宏的录制与简单的修改。<br><strong><em> 本文使用PowerMILL 2017版本进行讲述 </em></strong>，其他版本的软件类似。</p>
 <a id="more"></a>
-<h2 id="初始宏"><a href="#初始宏" class="headerlink" title="初始宏"></a>初始宏</h2><p>PowerMILL的初始宏文件位于软件安装目录下的lic\macro文件夹中。以笔者计算机的PowerMILL安装目录为例。初始宏文件位于以下目录：<br><strong><em>D:\Program Files\Autodesk\PowerMill 21.0.30\lib\macro</em></strong><br>其中，21.0.30 是PowerMILL 2017的版本号。</p>
+<h2 id="2-初始宏"><a href="#2-初始宏" class="headerlink" title="2 初始宏"></a>2 初始宏</h2><p>PowerMILL的初始宏文件位于软件安装目录下的lic\macro文件夹中。以笔者计算机的PowerMILL安装目录为例。初始宏文件位于以下目录：<br><strong><em>D:\Program Files\Autodesk\PowerMill 21.0.30\lib\macro</em></strong><br>其中，21.0.30 是PowerMILL 2017的版本号。</p>
 <p><strong>1 初始宏目录</strong><br>如下图所示，初始宏目录中默认有四个后续名为mac的文件。</p>
 <p><img src="http://p3i8i3rg0.bkt.clouddn.com/lib_macro.png" alt=""></p>
 <p>这里的4个mac文件为PowerMILL宏文件。对应内容如下：</p>
@@ -261,18 +261,18 @@
 <p>在宏文件里，以//开头的为宏的标识语句，用于注释，PowerMILL在运行这个文件时，会忽略以//开头的命令语句。</p>
 <p><strong>良好习惯</strong><br>在录制或者撰写PowerMILL宏的时候，应当养成良好的注释习惯。笔者建议用于学习PowerMILL初始宏的习惯。在每一个宏的开始。对宏文件进行一个详细的描述，并注释何人何时进行了修改，修订的内容是什么。</p>
 <p>以下为pminch.mac的整个宏的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">//		       POWERMILL2 MAIN STARTUP MACRO</span><br><span class="line">//</span><br><span class="line">//  This is the macro which actually starts PowerMILL.</span><br><span class="line">//</span><br><span class="line">// Modification History</span><br><span class="line">//</span><br><span class="line">// DICC  Who When     What   </span><br><span class="line">// ----- --- -------- -----------------------------------------------</span><br><span class="line">// 14505 CLH 27/06/95 Switch off long DEBUG checks by default</span><br><span class="line">// 14538 CLH 04/07/95 Renamed &apos;pmstartup.mac&apos; from &apos;fwork.mac&apos;</span><br><span class="line">// 15463 CLH 02/01/96 Add EDIT TRICACHE 20000</span><br><span class="line">// 15561 CLH 24/01/96 Add a FORM ISDEMO command at the end of macro</span><br><span class="line">// 16191 CLH 11/06/96 Added examples to macro search path</span><br><span class="line">// 17298 CLH 13/01/97 Remove EDIT TRICACHE command</span><br><span class="line">// nnnnn CLH 21/02/97 Added PMTESTDELIM comment for automatic testing</span><br><span class="line">// 20017 MH  18/09/97 Raise viewing toolbar</span><br><span class="line">// 24068 CLH 22/06/98 Add a Windows friendly path (~/pmill2)</span><br><span class="line">// 25695 CLH 22/10/98 Remove examples macro path, now done in code</span><br><span class="line">// 26619 LJP 28/01/99 hitrad is pixels not millemeters better result</span><br><span class="line">//                    if value changed from 1.0 to 5.0</span><br><span class="line">// 28044 CLH 10/06/99 Raise about form before running pmuser macro</span><br><span class="line">// 28076 CLH 14/06/99 Undo above change - powersolution#85</span><br><span class="line">// 28219 NRP 25/06/99 Use a sensible arctol - 0.1 instead of 0.001.</span><br><span class="line">// 33960 CNJ 12/10/00 Use graduated background by default </span><br><span class="line">// 39036 NRP 10/12/01 Added ~/pmill4 and ~/.pmill4 to the search path.</span><br><span class="line">//                    Made search paths volatile.</span><br><span class="line">// 39401 NRP 15/01/02 Tweak the search paths (add pmill4 after pmill2).</span><br><span class="line">// 39544 NRP 23/01/02 Remove the command that enabled the graduated background.</span><br><span class="line">// 39683 NRP 01/02/02 Enable the graduated background in here after all!</span><br><span class="line">// 52385 NRP 09/08/04 Don&apos;t enable the graduated background - view background </span><br><span class="line">//                    colours are now customisable.</span><br><span class="line">// 68041 NAA 30/10/07 Removed code to set arctol and hitrad</span><br><span class="line">//                    as it should be accessed only through registry.</span><br><span class="line">//-------------------------------------------------------------------</span><br><span class="line">powermill</span><br><span class="line">// Ensure the menus are visible now before proceeding</span><br><span class="line">wait form</span><br><span class="line">//</span><br><span class="line">// Incase this is a debug version switch off the time consuming checks</span><br><span class="line">//</span><br><span class="line">DEBUG MTFAST OFF</span><br><span class="line">DEBUG V3LITD OFF</span><br><span class="line">//</span><br><span class="line">// Raise viewing toolbar </span><br><span class="line">//</span><br><span class="line">TOOLBAR VIEWING RAISE</span><br><span class="line">//</span><br><span class="line">//</span><br><span class="line">// PMILLTESTDELIM  - Delimiter used by PowerMILL Development test system</span><br><span class="line">//</span><br><span class="line">// Add a search path to find users startup macro</span><br><span class="line">path add volatile &apos;~/.pmill2&apos; quit</span><br><span class="line">path add volatile &apos;~/pmill2&apos; quit</span><br><span class="line">path add volatile &apos;~/.pmill4&apos; quit</span><br><span class="line">path add volatile &apos;~/pmill4&apos; quit</span><br><span class="line">//</span><br><span class="line">// Run users macro (A dummy is supplied in lib/macros)</span><br><span class="line">//</span><br><span class="line">macro pmuser</span><br><span class="line">//</span><br><span class="line">// Now run a local macro which should (or maybe) be in current directory</span><br><span class="line">//</span><br><span class="line">macro pmlocal</span><br><span class="line">//</span><br><span class="line">// Pop a warning dialog if PowerMILL is in Demo Mode. The form is raised </span><br><span class="line">// via a command so that a rolling demo etc. could be started from &apos;pmuser.mac&apos; </span><br><span class="line">// or &apos;pmlocal.mac&apos; without the need to respond to a form first. </span><br><span class="line">//</span><br><span class="line">form isdemo</span><br><span class="line">//</span><br><span class="line">// That&apos;s it</span><br></pre></td></tr></table></figure><br>这个宏很有强的规范性，以及修订内容的记录。<br>一般的PowerMILL用户只需要修改pmuser.mac宏文件即可，这将在以下的章节中进行讲述。</p>
-<h2 id="录制宏"><a href="#录制宏" class="headerlink" title="录制宏"></a>录制宏</h2><p>在PowerMILL中可以通过软件的操作来录制宏文件。例如我们配置软件的NC的输出设置。</p>
+<h2 id="3-录制宏"><a href="#3-录制宏" class="headerlink" title="3 录制宏"></a>3 录制宏</h2><p>在PowerMILL中可以通过软件的操作来录制宏文件。例如我们配置软件的NC的输出设置。</p>
 <p><strong>1录制宏</strong><br>在PowerMILL的资源管理器中，右键宏，在弹出的子菜单中选取。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/macro_record.png" alt=""></p>
 <p>在选取记录宏文件中输入你所希望的保存宏的名称。例如NCProgramInitial.mac，单击保存即可以开始宏文件的录制。</p>
 <p>1）在PowerMILL里右键NC程序资源管理器。<br>2）在弹出的子菜单中，单击参数选择。<br>3）在参数选择中根据个人的实际需要，进行参数的改动。</p>
 <p>例如下图的设置<br><img src="http://p3i8i3rg0.bkt.clouddn.com/macro_ncprogram_initial.png" alt=""></p>
 <p>4）修改参数完成后，单击关闭。<br>5）右键单击资源管理器中的宏节点，在弹出的菜单中选取子菜单停止。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/macro_stop.png" alt=""></p>
 <p>这时，我们完成了一个宏文件的录制。</p>
-<h2 id="宏的命令修改"><a href="#宏的命令修改" class="headerlink" title="宏的命令修改"></a>宏的命令修改</h2><p>使用文本文件打开刚才录制的NCProgramInitial.mac文件。我们可以看到以下的宏命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FORM NCPREFERENCES</span><br><span class="line">EDIT NCPROGRAM PREFERENCES PROJECT ON</span><br><span class="line">EDIT NCPROGRAM PREFERENCES FILEMASK &quot;&#123;ncprogram&#125;.nc&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TAPEOPTIONS FILEOPEN</span><br><span class="line">&quot;C:\dcam\config\ductpost\fanuc.opt&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TOOLCHANGE NEW</span><br><span class="line">NCPREFERENCES ACCEPT</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-宏的命令修改"><a href="#4-宏的命令修改" class="headerlink" title="4 宏的命令修改"></a>4 宏的命令修改</h2><p>使用文本文件打开刚才录制的NCProgramInitial.mac文件。我们可以看到以下的宏命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FORM NCPREFERENCES</span><br><span class="line">EDIT NCPROGRAM PREFERENCES PROJECT ON</span><br><span class="line">EDIT NCPROGRAM PREFERENCES FILEMASK &quot;&#123;ncprogram&#125;.nc&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TAPEOPTIONS FILEOPEN</span><br><span class="line">&quot;C:\dcam\config\ductpost\fanuc.opt&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TOOLCHANGE NEW</span><br><span class="line">NCPREFERENCES ACCEPT</span><br></pre></td></tr></table></figure></p>
 <p>我们将其修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EDIT NCPROGRAM PREFERENCES PROJECT ON</span><br><span class="line">EDIT NCPROGRAM PREFERENCES FILEMASK &quot;&#123;ncprogram&#125;.nc&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TAPEOPTIONS FILEOPEN &quot;C:\dcam\config\ductpost\fanuc.opt&quot;</span><br></pre></td></tr></table></figure></p>
 <p><strong>注</strong><br>修改后的宏，可以直接放到PowerMILL初始宏目录下，并打开pmuser.mac文件。使用以下命令进行调用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Macro NCProgramInitial</span><br></pre></td></tr></table></figure></p>
 <p>也可以直接将修改后的命令放到pmuser.mac中。放入命令后如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//		       POWERMILL2 USER STARTUP MACRO</span><br><span class="line">//</span><br><span class="line">//  This is a dummy macro incase the user has not provided one in</span><br><span class="line">//  ~/.pmill2</span><br><span class="line">//</span><br><span class="line">// Modification History</span><br><span class="line">//</span><br><span class="line">// DICC  Who When     What   </span><br><span class="line">// ----- --- -------- -----------------------------------------------</span><br><span class="line">// 14538 CLH 04/07/95 Written</span><br><span class="line">//------------------------------------------------------------------------------</span><br><span class="line">EDIT NCPROGRAM PREFERENCES PROJECT ON</span><br><span class="line">EDIT NCPROGRAM PREFERENCES FILEMASK &quot;&#123;ncprogram&#125;.nc&quot;</span><br><span class="line">EDIT NCPROGRAM PREFERENCES TAPEOPTIONS FILEOPEN &quot;C:\dcam\config\ductpost\fanuc.opt&quot;</span><br></pre></td></tr></table></figure></p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>完成了pmuser.mac用户宏的修改后，以后每次打开PowerMILL，则软件会默认配置NC程序。对于PowerMILL来讲，除了直接在pmuser.mac中进行自定义宏之外，还有其他的办法定义，这将会在下一个博客《PowerMILL宏的使用03》中讲述，敬请期待！</p>
+<h2 id="5-后续"><a href="#5-后续" class="headerlink" title="5 后续"></a>5 后续</h2><p>完成了pmuser.mac用户宏的修改后，以后每次打开PowerMILL，则软件会默认配置NC程序。对于PowerMILL来讲，除了直接在pmuser.mac中进行自定义宏之外，还有其他的办法定义，这将会在下一个博客《PowerMILL宏的使用03》中讲述，敬请期待！</p>
 
       
 
@@ -442,7 +442,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始宏"><span class="toc-number">2.</span> <span class="toc-text">初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#录制宏"><span class="toc-number">3.</span> <span class="toc-text">录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-初始宏"><span class="toc-number">2.</span> <span class="toc-text">2 初始宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-录制宏"><span class="toc-number">3.</span> <span class="toc-text">3 录制宏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-宏的命令修改"><span class="toc-number">4.</span> <span class="toc-text">4 宏的命令修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-后续"><span class="toc-number">5.</span> <span class="toc-text">5 后续</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -579,18 +579,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点点滴滴</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PowerMILL</a>
               </li>
              
@@ -608,6 +596,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自动</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">点点滴滴</a>
               </li>
             
             <div class="clearfix"></div>
