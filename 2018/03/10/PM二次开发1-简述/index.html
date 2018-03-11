@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://hinsho.com">
-  <title>开设个人博客 | HinsHo的博客</title>
+  <title>PM二次开发1-简述 | HinsHo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2018年1月1号，开始捣鼓个人的博客。 用于记录生活与工作的点点滴滴！ 以后会不断的丰富与完善本博客！">
-<meta name="keywords" content="生活,工作,点点滴滴">
+  <meta name="description" content="1 概述现在有许多PowerMILL的使用的软件教程在网上可以找到很多，PowerMILL软件外挂也有很多，但真正适合自己的外挂可能很少，或者是自己想开发一些程序，但没有有关二次开发学习的相应教程与视频。 本博客是PowerMILL二次开发教程系列中的第一课。PowerMILL二次开发1-简述。">
+<meta name="keywords" content="PowerMILL,PM二次开发,宏,语法,命令,自动">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开设个人博客">
-<meta property="og:url" content="http://hinsho.com/2018/01/01/开设个人博客/index.html">
+<meta property="og:title" content="PM二次开发1-简述">
+<meta property="og:url" content="http://hinsho.com/2018/03/10/PM二次开发1-简述/index.html">
 <meta property="og:site_name" content="HinsHo的博客">
-<meta property="og:description" content="2018年1月1号，开始捣鼓个人的博客。 用于记录生活与工作的点点滴滴！ 以后会不断的丰富与完善本博客！">
+<meta property="og:description" content="1 概述现在有许多PowerMILL的使用的软件教程在网上可以找到很多，PowerMILL软件外挂也有很多，但真正适合自己的外挂可能很少，或者是自己想开发一些程序，但没有有关二次开发学习的相应教程与视频。 本博客是PowerMILL二次开发教程系列中的第一课。PowerMILL二次开发1-简述。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-02T02:05:08.902Z">
+<meta property="og:updated_time" content="2018-03-11T09:05:53.258Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开设个人博客">
-<meta name="twitter:description" content="2018年1月1号，开始捣鼓个人的博客。 用于记录生活与工作的点点滴滴！ 以后会不断的丰富与完善本博客！">
+<meta name="twitter:title" content="PM二次开发1-简述">
+<meta name="twitter:description" content="1 概述现在有许多PowerMILL的使用的软件教程在网上可以找到很多，PowerMILL软件外挂也有很多，但真正适合自己的外挂可能很少，或者是自己想开发一些程序，但没有有关二次开发学习的相应教程与视频。 本博客是PowerMILL二次开发教程系列中的第一课。PowerMILL二次开发1-简述。">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
   
@@ -177,32 +177,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-开设个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PM二次开发1-简述" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      开设个人博客
+      PM二次开发1-简述
     </h1>
   
 
         
-        <a href="/2018/01/01/开设个人博客/" class="archive-article-date">
-  	<time datetime="2018-01-01T01:02:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-01</time>
+        <a href="/2018/03/10/PM二次开发1-简述/" class="archive-article-date">
+  	<time datetime="2018-03-10T14:07:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-10</time>
 </a>
         
       </header>
     
     <!-- 目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+  <span class="btn-bg"></span>
+  <span class="btn-text">文章导航</span>
+  </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li></ol>
+ </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
      
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2018年1月1号，开始捣鼓个人的博客。</p>
-<p>用于记录生活与工作的点点滴滴！</p>
-<p><strong>以后会不断的丰富与完善本博客！</strong></p>
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>现在有许多PowerMILL的使用的软件教程在网上可以找到很多，PowerMILL软件外挂也有很多，但真正适合自己的外挂可能很少，或者是自己想开发一些程序，但没有有关二次开发学习的相应教程与视频。</p>
+<p>本博客是PowerMILL二次开发教程系列中的第一课。PowerMILL二次开发1-简述。</p>
 
       
 
@@ -247,15 +270,27 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">PowerMILL</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工作</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">PM二次开发</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点点滴滴</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">宏</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">语法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">命令</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自动</a>
         		</li>
       		
 		</ul>
@@ -311,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://hinsho.com/2018/01/01/开设个人博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://hinsho.com/2018/03/10/PM二次开发1-简述/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,15 +360,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/01/06/PowerMILL宏的使用01/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PowerMILL宏的使用01
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/05/PowerMILL宏的使用03-usermenu的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PowerMILL宏的使用03-usermenu的使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -351,6 +382,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside> -->

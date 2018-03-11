@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="HinsHo的博客">
 <meta property="og:description" content="1 概述宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。PowerMILL的宏语法格式本身很简单，基本都是 名词+动词 或者是 动词+名词">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/google.jpg">
-<meta property="og:updated_time" content="2018-03-10T00:48:37.368Z">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/Google_translate.jpg">
+<meta property="og:updated_time" content="2018-03-11T08:57:06.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PowerMILL宏的使用01">
 <meta name="twitter:description" content="1 概述宏是PowerMILL软件的语言，也是软件驱动命令。它有固定的语法格式。我们在学习PowerMILL宏命令语句时，首先要学习其语法。PowerMILL的宏语法格式本身很简单，基本都是 名词+动词 或者是 动词+名词">
-<meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/google.jpg">
+<meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/Google_translate.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
   
@@ -65,6 +65,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/PowerMILL/">PowerMILL</a></li>
+	        
+				<li><a href="/tags/PM二次开发/">PM二次开发</a></li>
 	        
 				<li><a href="/tags/生活/">生活</a></li>
 	        
@@ -132,6 +134,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -152,13 +156,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/PowerMILL/">PowerMILL</a></li>
+					<li style="width: 20%"><a href="/tags/PowerMILL/">PowerMILL</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/生活/">生活</a></li>
+					<li style="width: 20%"><a href="/tags/PM二次开发/">PM二次开发</a></li>
 		        
-					<li style="width: 25%"><a href="/photos/">相册</a></li>
+					<li style="width: 20%"><a href="/tags/生活/">生活</a></li>
+		        
+					<li style="width: 20%"><a href="/photos/">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -451,7 +457,7 @@
 <p>语法：<strong>动词</strong>（ACTIVATE）+<strong>名词</strong>（Toolpath）+<strong>名词</strong>(动词)<br>   点评：这个是PM语法中最常见的模式，大约占的80%多，元素名称要加“”。记住常用动词和常用名词，很多宏都可以明白！<br>   类似的语句：<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">EDIT RTHICKNESS &quot;0.5&quot; //改开粗余量</span><br><span class="line">EDIT ACUTDIR ANY //改为来回铣</span><br><span class="line">EDIT AREAFILTER OFF //不使用区域过滤</span><br><span class="line">RENAME Tool &quot;R4&quot; &quot;8&quot; //改变刀具名称</span><br></pre></td></tr></table></figure></p>
 <p>2) 示例B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ROTATE TRANSFORM FRONT VIEWMILL RESIZEVIEW</span><br></pre></td></tr></table></figure><br>   词义:前试图查看<br>   语法：固定命令<br>   点评：这个是PM语法中也较多的模式，大约占的10%多。这些就靠平常多记了！<br>   类似的语句：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DELETE SCALE VIEWMILL RESIZEVIEW  //全屏查看</span><br><span class="line">SET TOOLPATHPOINTS //显示刀位点</span><br><span class="line">DELETE TOOLPATH ; SELECTED //删除选中的刀路</span><br></pre></td></tr></table></figure></p>
 <p><strong>当然如果你认识的单词多的话，这样语句，看到几个关键词，也是能明白是什么意思。</strong><br>如果英文阅读能力不是很好，那这个时候，你可以使用google translate大法了。在以下的翻译框中输入英文</p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/google.jpg" alt=""></p>
+<p><img src="http://p3i8i3rg0.bkt.clouddn.com/Google_translate.jpg" alt=""></p>
 <h2 id="3-宏运行的屏幕闪烁的解决方法"><a href="#3-宏运行的屏幕闪烁的解决方法" class="headerlink" title="3 宏运行的屏幕闪烁的解决方法"></a>3 宏运行的屏幕闪烁的解决方法</h2><p><strong>原因</strong>     出现窗体<br><strong>解决方法</strong> 尽量不要让窗体出现。<br><strong>举例</strong><br>1）比较隐藏的修改例子<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IMPORT TEMPLATE ENTITY TOOLPATH TMPLTSELECTORGUI &quot;Finishing\3D-Offset-Finishing.ptf&quot;</span><br></pre></td></tr></table></figure><br>  这样的宏运行的就会弹出刀路设置窗体，我们可以这样修改，让他不弹出窗体，屏幕就不会闪烁，<br>  修改后命令<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IMPORT TEMPLATE ENTITY TOOLPATH  &quot;Finishing\3D-Offset-Finishing.ptf&quot;</span><br></pre></td></tr></table></figure><br>  <strong>点评</strong><br>  这样的宏是我们比较常用的，且被修改的地方比较隐蔽！在这里我们去掉了单词<strong>TMPLTSELECTORGUI</strong>，并且要把2句合在一行！</p>
 <p>2）比较明显的修改例子<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">FORM WPEDIT EDIT WORKPLANE &quot;kk&quot; INTERACTIVE TRANSFORM MOVE &quot;5&quot;  </span><br><span class="line">TRANSFORM TYPE MOVE </span><br><span class="line">TRANSFORM MOVEZ PRESET TRANSFORM WORKPLANE &quot;kk&quot;  WPEDIT ACCEPT</span><br></pre></td></tr></table></figure><br>  这样的宏运行的就会弹出坐标系编辑窗体，我们可以这样修改第1句，让他不弹出窗体，屏幕就不会闪烁:<br>  修改后命令<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EDIT WORKPLANE &quot;kk&quot; INTERACTIVE</span><br></pre></td></tr></table></figure><br>  点评，这样的宏是我们比较常用的，且被修改的地方非常的明显，当宏里面出现FORM，在这里我们去掉了单词 FORM,并且一般也要一起去掉FORM后的名词！</p>
 <h2 id="4-做宏要注意问题"><a href="#4-做宏要注意问题" class="headerlink" title="4 做宏要注意问题"></a>4 做宏要注意问题</h2><p><strong>1）需要模块化的思想</strong><br>  一些常用的宏可以做成一个单独的宏文件，比如设置安全高度，铜公分中台毛胚等，再用MACRO+路径调用，这样做少了很多重复劳动，并且后面修改起来也很方便。那些是你常用的宏，这个大家在做宏中可以体会的出来。</p>
@@ -768,6 +774,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PowerMILL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">PM二次开发</a>
               </li>
              
               <li class="article-tag-list-item">
