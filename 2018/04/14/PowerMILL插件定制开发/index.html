@@ -6,27 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://hinsho.com">
-  <title>厦大的一日游 | HinsHo的博客</title>
+  <title>PowerMILL插件定制开发 | HinsHo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实，这篇博文的标目不是很适合，严格来说，并不是一日游。只不是是出差厦门大学，顺道游了下南普陀。都是厦门是一座旅游城市，每天来自各地的游客都有很多，来看厦门的景区。不过我却没有时间来得急慢慢的游玩。">
-<meta name="keywords" content="生活,点点滴滴">
+  <meta name="description" content="1 概述本篇博文，主要演示我利用业余时间，给一个微信客户定制开发的PowerMILL插件程序。该插件运行于PowerMILL 2016（及以上的版本的软件，包括PowerMILL 2017,PowerMILL 2018 以及PowerMILL 2019）。这个插件实现的功能就是选择特定的程序进行碰撞与过切检查，同时根据检查的结果对刀具路径进行重命名。">
+<meta name="keywords" content="PowerMILL,定制开发,二次开发,插件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="厦大的一日游">
-<meta property="og:url" content="http://hinsho.com/2018/03/22/厦大的一日游/index.html">
+<meta property="og:title" content="PowerMILL插件定制开发">
+<meta property="og:url" content="http://hinsho.com/2018/04/14/PowerMILL插件定制开发/index.html">
 <meta property="og:site_name" content="HinsHo的博客">
-<meta property="og:description" content="其实，这篇博文的标目不是很适合，严格来说，并不是一日游。只不是是出差厦门大学，顺道游了下南普陀。都是厦门是一座旅游城市，每天来自各地的游客都有很多，来看厦门的景区。不过我却没有时间来得急慢慢的游玩。">
+<meta property="og:description" content="1 概述本篇博文，主要演示我利用业余时间，给一个微信客户定制开发的PowerMILL插件程序。该插件运行于PowerMILL 2016（及以上的版本的软件，包括PowerMILL 2017,PowerMILL 2018 以及PowerMILL 2019）。这个插件实现的功能就是选择特定的程序进行碰撞与过切检查，同时根据检查的结果对刀具路径进行重命名。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180320_235819.jpg">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_135634.jpg">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_134950.jpg">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_135341.jpg">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_150734.jpg">
-<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_150409.jpg">
-<meta property="og:updated_time" content="2018-03-30T01:35:16.520Z">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-2018.jpg">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-2018-%E6%9B%B4%E6%96%B0%E5%8E%86%E5%8F%B2.jpg">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A51.jpg">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A52-%E5%B7%B2%E6%94%B9%E5%90%8D.jpg">
+<meta property="og:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A52-%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.jpg">
+<meta property="og:updated_time" content="2018-04-14T13:48:08.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="厦大的一日游">
-<meta name="twitter:description" content="其实，这篇博文的标目不是很适合，严格来说，并不是一日游。只不是是出差厦门大学，顺道游了下南普陀。都是厦门是一座旅游城市，每天来自各地的游客都有很多，来看厦门的景区。不过我却没有时间来得急慢慢的游玩。">
-<meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180320_235819.jpg">
+<meta name="twitter:title" content="PowerMILL插件定制开发">
+<meta name="twitter:description" content="1 概述本篇博文，主要演示我利用业余时间，给一个微信客户定制开发的PowerMILL插件程序。该插件运行于PowerMILL 2016（及以上的版本的软件，包括PowerMILL 2017,PowerMILL 2018 以及PowerMILL 2019）。这个插件实现的功能就是选择特定的程序进行碰撞与过切检查，同时根据检查的结果对刀具路径进行重命名。">
+<meta name="twitter:image" content="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-2018.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HinsHo的博客" type="application/atom+xml">
   
@@ -184,20 +183,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-厦大的一日游" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PowerMILL插件定制开发" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      厦大的一日游
+      PowerMILL插件定制开发
     </h1>
   
 
         
-        <a href="/2018/03/22/厦大的一日游/" class="archive-article-date">
-  	<time datetime="2018-03-22T05:29:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
+        <a href="/2018/04/14/PowerMILL插件定制开发/" class="archive-article-date">
+  	<time datetime="2018-04-14T13:16:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
 </a>
         
       </header>
@@ -211,7 +210,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-主要功能"><span class="toc-number">2.</span> <span class="toc-text">2 主要功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-插件的更新说明"><span class="toc-number">3.</span> <span class="toc-text">3 插件的更新说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-插件的检查截图演示"><span class="toc-number">4.</span> <span class="toc-text">4 插件的检查截图演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-后续"><span class="toc-number">5.</span> <span class="toc-text">3 后续</span></a></li></ol>
  </div>
  <script type="text/javascript">
   function showToc(){
@@ -231,18 +230,18 @@
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>其实，这篇博文的标目不是很适合，严格来说，并不是一日游。只不是是出差厦门大学，顺道游了下南普陀。<br>都是厦门是一座旅游城市，每天来自各地的游客都有很多，来看厦门的景区。不过我却没有时间来得急慢慢的游玩。</p>
+        <h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>本篇博文，主要演示我利用业余时间，给一个微信客户定制开发的PowerMILL插件程序。该插件运行于PowerMILL 2016（及以上的版本的软件，包括PowerMILL 2017,PowerMILL 2018 以及PowerMILL 2019）。<br>这个插件实现的功能就是选择特定的程序进行碰撞与过切检查，同时根据检查的结果对刀具路径进行重命名。</p>
 <a id="more"></a>
-<p>前一天来到厦门，高铁到达厦门站，已经是晚上十一点了，打个车到厦门大学思明校区，只能在车上看看晚上的夜景，看看海边的风景。夜景却是很美丽。<br>等到了思明校区，入校办酒店，办理入住手续。放下行李，与同行的同事一周晚上3人一起走到校区外的找吃的。可能是因为我们到达的比较晚了，大部分店铺已经关门，想吃个夜宵，只能去KFC或者麦当劳了。</p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180320_235819.jpg" alt=""></p>
-<p>厦大白天应该是有游人来参数，是个旅游景点。因为专门设有游人行道，后来听厦大的老师说，是在非上课时间游人可以入校进行参观。因为我们是晚上入住大学内，故白天可以在校区内走去。上午谈完事情，在厦大的思明校区简单的参观后，就直奔另一个校区，去参观一个学院。在翔安校区看到了民航飞的机拆解的零件。</p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_135634.jpg" alt=""></p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_134950.jpg" alt=""></p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_135341.jpg" alt=""></p>
-<p>参观完校区，又没到高铁开动的时间，所以就打车又回到思明校区，参观了南普陀寺。</p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_150734.jpg" alt=""></p>
-<p><img src="http://p3i8i3rg0.bkt.clouddn.com/IMG_20180321_150409.jpg" alt=""></p>
-<p>最后还是坐了下午的高铁回到了深圳。厦门这一趟因为出差的原故，走得急。下一次需要找个时间到厦门慢慢的旅游几天才好！享受下厦门的慢生活！</p>
+<p>以下是PowerMILL 2017中打开该插件的界面图。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-2018.jpg" alt=""></p>
+<h2 id="2-主要功能"><a href="#2-主要功能" class="headerlink" title="2 主要功能"></a>2 主要功能</h2><p>该插件主要有以下几个功能：</p>
+<p>1）缺省全选全部的刀具路径进行检查；<br>2）通过选择指定的刀具路径，可以删除没有选择的刀具路径，只保存已有的刀具路径；<br>3）进行刀具路径的先碰撞检查，再进行过切刀具路径检查；<br>4）对发生碰撞的刀具路径，按既定的规则进行重命名；<br>5）软件支持快捷键的使用</p>
+<h2 id="3-插件的更新说明"><a href="#3-插件的更新说明" class="headerlink" title="3 插件的更新说明"></a>3 插件的更新说明</h2><p>如下图所示，该插件的更新历史。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-2018-%E6%9B%B4%E6%96%B0%E5%8E%86%E5%8F%B2.jpg" alt=""></p>
+<h2 id="4-插件的检查截图演示"><a href="#4-插件的检查截图演示" class="headerlink" title="4 插件的检查截图演示"></a>4 插件的检查截图演示</h2><p>我们使用该插件，对一个项目进行批量的刀具路径检查。其中如下几图所示</p>
+<p>1）检查中…<br><img src="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A51.jpg" alt=""></p>
+<p>2)检查过程中对刀具路径进行重命名…<br><img src="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A52-%E5%B7%B2%E6%94%B9%E5%90%8D.jpg" alt=""></p>
+<p>3)检查完成后，弹出检查报告。<br><img src="http://p3i8i3rg0.bkt.clouddn.com/%E5%B0%8F%E7%BE%BD%E8%BD%AF%E4%BB%B6-%E5%88%80%E8%B7%AF%E6%A3%80%E6%9F%A5%E5%99%A8-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A52-%E6%A3%80%E6%9F%A5%E6%8A%A5%E5%91%8A.jpg" alt=""></p>
+<h2 id="3-后续"><a href="#3-后续" class="headerlink" title="3 后续"></a>3 后续</h2><p>由于PowerMILL插件是将界面集成到PowerMILL软件中，所以每在计算桌面里打开一个PowerMILL,那么就可以打开多个插件，并且每一个插件之间互不影响，所以插件相对于独立的二次开发界面来说，是一种很不错的开发选择。</p>
+<p>日后，我会就我开发过的插件进行更多的介绍。<br>如果，有朋友或者网友需要定制插件，可以联系本人，通过邮件说明你的需求，我会作出相应的回复。</p>
 
       
 
@@ -287,11 +286,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">PowerMILL</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点点滴滴</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">定制开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">二次开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">插件</a>
         		</li>
       		
 		</ul>
@@ -347,7 +354,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://hinsho.com/2018/03/22/厦大的一日游/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://hinsho.com/2018/04/14/PowerMILL插件定制开发/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -361,18 +368,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/30/PowerMILL电极的讨论/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PowerMILL电极的讨论
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/15/PowerMILL客制化视频教程/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PowerMILL客制化视频教程</div>
+    <a href="/2018/04/03/PowerMILL操作小技巧/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PowerMILL操作小技巧</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -400,7 +398,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-主要功能"><span class="toc-number">2.</span> <span class="toc-text">2 主要功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-插件的更新说明"><span class="toc-number">3.</span> <span class="toc-text">3 插件的更新说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-插件的检查截图演示"><span class="toc-number">4.</span> <span class="toc-text">4 插件的检查截图演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-后续"><span class="toc-number">5.</span> <span class="toc-text">3 后续</span></a></li></ol>
                     </div>
                 </span>
             </div>
